@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:padding="@dimen/dp8"
+    tools:context=".EditorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/category_overview"
+                android:textAlignment="center"
+                android:textColor="@color/name_color"
+                android:textSize="@dimen/sp20" />
+
+            <!-- Input fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="6"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dp4"
+                android:paddingLeft="@dimen/dp4"
+                android:paddingRight="@dimen/dp4"
+                android:paddingStart="@dimen/dp4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name_label"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/item_name"
+                        android:textSize="@dimen/sp20" />
+
+                    <EditText
+                        android:id="@+id/edit_item_name"
+                        style="@style/EditorFieldStyle"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/price_label"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/price"
+                        android:textSize="@dimen/sp20" />
+
+                    <EditText
+                        android:id="@+id/edit_item_price"
+                        style="@style/EditorFieldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/quantity_label"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/quantity"
+                        android:textSize="@dimen/sp20" />
+
+                    <Button
+                        android:id="@+id/quantity_decrease"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:text="@string/minus"
+                        android:background="@color/buy_button_color"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:id="@+id/edit_item_quantity"
+                        style="@style/EditorFieldStyle"
+                        android:inputType="number"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/quantity_increase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:text="@string/plus"
+                        android:background="@color/buy_button_color"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/supplier_label"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/supplier_s_name"
+                        android:textSize="@dimen/sp20" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/edit_item_supplier_name"
+                        style="@style/EditorFieldStyle"
+                        android:inputType="textCapWords" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/phone_label"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/supplier_s_phone"
+                        android:textSize="@dimen/sp20" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/edit_item_supplier_phone"
+                        style="@style/EditorFieldStyle"
+                        android:inputType="phone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/order_book"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginStart="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp100"
+                android:layout_marginRight="@dimen/dp100"
+                android:layout_marginEnd="@dimen/dp100"
+                android:background="@color/buy_button_color"
+                android:text="@string/order_book"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

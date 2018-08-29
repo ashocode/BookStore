@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#795548</color>
+    <color name="editorColorPrimary">#795548</color>
+    <color name="editorColorPrimaryDark">#394450</color>
+    <color name="name_color">#616161</color>
+    <color name="details_color">#9E9E9E</color>
+    <color name="hint_text_color">#BDBDBD</color>
+    <color name="buy_button_color">#FFD180</color>
+    <color name="background_color">#FFE0B2</color>
+    <color name="light_text_color">#A2AAB0</color>
+</resources>
